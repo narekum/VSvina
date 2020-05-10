@@ -29,7 +29,8 @@ __     ______       _
   \ V /  ___) \ V /| | | | | (_| |
    \_/  |____/ \_/ |_|_| |_|\__._|
     Virtual Screening of Ligands                                  
-
+    ©Narendra Kumar, 2020
+    https://github.com/narekum/VSvina
 ' ;
 
 
@@ -151,8 +152,8 @@ foreach my $ligand ( @ldir_pdbqts) {
 	$ligand =~ s/.pdbqt\s*// ;
 	print "    Preparing to  dock $ligand to $rpdbqt \n\n";
 	if (! -e "$outdir/logs/$ligand.log" ) {
-		print "    Running \"$vina --receptor $outdir/$rpdbqt --ligand $ldir/$ligand.pdbqt --config $outdir/conf.txt --out $outdir/results/$ligand.pdbqt --log $outdir/logs/$ligand.log\"" ;
-		system ("$vina --receptor $outdir/$rpdbqt --ligand $ldir/$ligand.pdbqt --config $outdir/conf.txt --out $outdir/results/$ligand.pdbqt --log $outdir/logs/$ligand.log") ;
+		print "    Running \"$vina --receptor $outdir/$rpdbqt --ligand $ldir/$ligand.pdbqt --config $outdir/$conf --out $outdir/results/$ligand.pdbqt --log $outdir/logs/$ligand.log\"" ;
+		system ("$vina --receptor $outdir/$rpdbqt --ligand $ldir/$ligand.pdbqt --config $outdir/$conf --out $outdir/results/$ligand.pdbqt --log $outdir/logs/$ligand.log") ;
 		print "    Finished docking $ligand to $rpdbqt \n\n\n\n" ;
 	} else {
 		print "    $outdir/logs/$ligand.log already exists!!! Skipping docking for \"$ligand.log\" !!! \n\n\n\n";
