@@ -152,7 +152,7 @@ VSvina needs this file. It could be created by any means. First column should be
 For docking the ligands to receptor, receptor pdb file must be converted to pdbqt file. Our receptor is PKA from which the ligand ADP has been removed. We want to dock ligands from our library in the same place where ADP was originally bound.
 
 |PKA (1JBP)|ADP bound to PKA|
-|--------------:|:--------------:|
+|:--------------:|:--------------:|
 |![receptor](img/rec_ligand_1_sml.png)|![receptor](img/rec_ligand_2_sml.png)
 
 Copy 1jbp.pdb from test directory to current directory
@@ -224,4 +224,4 @@ DB00131   1         -8.2      0.000      0.000	adenylate
 Evidently `vemurafenib` is top affinity binder to ATP among the four ligands in our library
 
 ![docked](./img/1jbp_docked.png)
-Origina ADP is in cyan while best docked conformation of vemurafenib is in magenta.  
+Crystal structure bound ADP is in cyan while best docked conformation of vemurafenib is in magenta.  
