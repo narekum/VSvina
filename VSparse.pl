@@ -23,7 +23,7 @@ use File::Path qw(make_path);
 use LWP::Simple;
 use Getopt::Long ;
 
-print '
+print STDERR '
 __     ______                            
 \ \   / / ___| _ __   __ _ _ __ ___  ___ 
  \ \ / /\___ \| "_ \ / _" | "__/ __|/ _ \
@@ -67,7 +67,7 @@ if (defined $report ) {
 	print "    Input sdf file \"$sdf\" has the following fields:\n\n";
 
 	my $all_fields=REPORT_FIELDS($sdf);
-	print "    $_\n" foreach keys %$all_fields ;
+	print "    $_\n" foreach sort keys %$all_fields ;
 
 	print "\n\n\n";
 
@@ -168,7 +168,7 @@ sub REPORT_FIELDS {
 		$count++;
 		@each_record=();
 		@each_record = split (/\n/, $_ ) ;
-		foreach ( @each_record ) {
+		foreach (  @each_record ) {
 			if ($_ =~ /^\s*>\s*<(.*?)>/ ) {  # "> <DATABASE_ID>" this is how the record looks like
 				my $field_name = $1 ;
 				#print "$count $field_name\n";

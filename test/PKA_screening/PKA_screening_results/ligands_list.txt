@@ -1,0 +1,4 @@
+structures1.pdbqt   DB00131 adenylate
+structures2.pdbqt   DB00171 adenosine triphosphate
+structures3.pdbqt   DB08881 vemurafenib
+structures4.pdbqt   DB00619 imatinib

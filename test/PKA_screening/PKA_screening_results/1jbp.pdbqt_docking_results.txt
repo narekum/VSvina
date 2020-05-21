@@ -1,0 +1,7 @@
+       	mode |   affinity | dist from best mode
+       	     | (kcal/mol) | rmsd l.b.| rmsd u.b.
+       	-----+------------+----------+----------
+DB08881	   1         -9.4      0.000      0.000	vemurafenib
+DB00619	   1         -9.3      0.000      0.000	imatinib
+DB00171	   1         -8.3      0.000      0.000	adenosine	triphosphate
+DB00131	   1         -8.2      0.000      0.000	adenylate
